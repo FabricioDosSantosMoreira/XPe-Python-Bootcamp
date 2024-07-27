@@ -19,7 +19,6 @@ print(f"\nCondição (x > {k}):\n {condicao}")
 print(f"Elementos maiores que {k}: {x[condicao]}")
 print(f"Números de elementos maiores que {k}: {len(x[condicao])}")
 
-
 condicao = x % 2 == 0 # Extraindo números pares
 
 print(f"\nCondição (x % 2 == 0):\n {condicao}")

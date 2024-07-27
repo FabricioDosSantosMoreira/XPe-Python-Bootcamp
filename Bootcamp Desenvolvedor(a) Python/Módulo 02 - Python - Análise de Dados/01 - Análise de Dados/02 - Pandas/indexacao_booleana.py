@@ -1,15 +1,15 @@
 from pathlib import Path
+
 import pandas as pd
 
-ROOT_PATH = Path(__file__).parent
-
-print("\nArquivo CSV:\n")
+ROOT_PATH: Path = Path(__file__).parent
 
 dataframe = pd.read_csv(ROOT_PATH / "temperature.csv")
 dataframe['date'] = pd.to_datetime(dataframe['date']) # Transformando 'dataframe['date']' para datetime
 dataframe = dataframe.set_index('date') # Setando o índice
 
-print(dataframe)
+print("\nArquivo CSV:")
+print(f"\n{dataframe}")
 print(f"\n{dataframe.dtypes}")
 
 

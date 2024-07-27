@@ -1,8 +1,9 @@
-from typing import Tuple, Union
-import pandas as pd
+from typing import Union
 
+import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 from util.generics import categorize_contents
+
 
 def visualizar_tamanho_dataset(*, df: pd.DataFrame) -> None:
     linhas, colunas = df.shape
@@ -181,7 +182,6 @@ def visualizar_medias_de_locacoes_por_horarios_de_um_dia(*, app, df: pd.DataFram
     contents = categorize_contents(contents=list(dias_da_semana.values()))
 
     dia_da_semana: int = app.interface_handler.display_and_select(headers=headers, contents=contents)
-    # Nem me pergunta oq é isso
     indice_dia_da_semana = int(dia_da_semana) - 1
 
     df_dia_da_semana = df[df["weekday"] == indice_dia_da_semana]

@@ -1,5 +1,6 @@
-from util.generics import categorize_contents
 from logic import logic
+from util.generics import categorize_contents
+
 
 class Interface():
 

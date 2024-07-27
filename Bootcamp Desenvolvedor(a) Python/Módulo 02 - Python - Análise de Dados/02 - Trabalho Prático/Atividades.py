@@ -1,3 +1,5 @@
+from typing import Dict, List
+
 import numpy as np
 import pandas as pd
 
@@ -57,7 +59,7 @@ print(np.mean(X[X > np.pi]))
 
 # Atividade 08
 print("\nAtividade 08:")
-data = {
+data: Dict[str, List] = {
     'animal': 
         ['cat', 'cat', 'snake', 'dog', 'dog', 'cat', 'snake', 'cat', 'dog', 'dog'], 
     'age': 
@@ -67,8 +69,8 @@ data = {
     'priority': 
         ['yes', 'yes', 'no', 'yes', 'no', 'no', 'no', 'yes', 'no', 'no']}
 
-labels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+labels: List[str] = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
 
 dataframe = pd.DataFrame(data=data, index=labels)
 
-print(f"DataFrame:\n {dataframe}")
+print(f"\nDataFrame:\n {dataframe}")

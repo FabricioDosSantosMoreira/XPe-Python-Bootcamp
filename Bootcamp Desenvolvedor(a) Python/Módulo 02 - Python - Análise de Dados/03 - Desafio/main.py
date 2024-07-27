@@ -1,12 +1,10 @@
-import pandas as pd
 import os
-
 from pathlib import Path
+
+import pandas as pd
+
 from handlers.interface_handler import InterfaceHandler
 from interface.interface import Interface
-
-
-
 
 
 class Main():

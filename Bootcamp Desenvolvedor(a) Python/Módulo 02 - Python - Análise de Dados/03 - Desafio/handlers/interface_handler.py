@@ -1,10 +1,10 @@
-from typing import Callable, Optional, Tuple, Dict, List, Any
-from wcwidth import wcswidth
 import time
+from typing import Callable, Dict, List, Optional, Tuple
 
-from util.generics import match_parity, evenly_assign_value_to_list
-from util.strings import has_non_ascii, reduce_string_length, reduce_strings_length
+from util.generics import evenly_assign_value_to_list, match_parity
 from util.inputs import read_int
+from util.strings import has_non_ascii, reduce_string_length, reduce_strings_length
+from wcwidth import wcswidth
 
 
 class InterfaceHandler():
@@ -56,7 +56,6 @@ class InterfaceHandler():
                         symbols=self.interface_symbols,
                         func=func
                     )
-
 
         print(border)
         print(msg)

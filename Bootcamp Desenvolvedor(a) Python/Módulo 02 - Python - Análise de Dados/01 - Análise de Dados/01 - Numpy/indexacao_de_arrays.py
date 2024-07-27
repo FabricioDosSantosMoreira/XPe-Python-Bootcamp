@@ -5,8 +5,6 @@ x =  np.linspace(start=10, stop=100, num=10)
 print(f"\nx:\n {x}")
 print(f"\nx.shape: {x.shape}")
 
-
-
 # Indexação de Numpy Arrays
 print("\nIndexação de Numpy Arrays:\n")
 
@@ -17,8 +15,6 @@ print(f"Último elemento: x[-1] = {x[-1]}")
 print (f"Os dois primeiro elementos: x[0:2] = {x[0:2]}") # Do 0 até 2 - 1 (exclusivo)
 print (f"Os dois primeiro elementos: x[:2] = {x[:2]}") # Do 0 até 1 (exclusivo)
 print (f"OS dois ultimos elementos: x[-2:] = {x[-2:]}") # Do -1 até -2 
-
-
 
 # Reshape de x para 2 linhas e 5 colunas
 x = x.reshape(2, 5) 
