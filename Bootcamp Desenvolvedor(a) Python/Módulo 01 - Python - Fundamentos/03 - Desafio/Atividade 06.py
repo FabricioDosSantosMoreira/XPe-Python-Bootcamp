@@ -1,6 +1,7 @@
 from enum import Enum
 from typing import Dict, List, Set, Union
 
+
 class DiasDaSemana(Enum):
     SEGUNDA = 1
     TERCA = 2
@@ -23,7 +24,7 @@ especialistas: Dict[str, Set[DiasDaSemana]] = {
 def disp_dois_especialistas(
         especialista01: Set[DiasDaSemana], 
         especialista02: Set[DiasDaSemana]
-    ) -> Union[List[DiasDaSemana], str]:   
+    ) -> Union[List[DiasDaSemana], List[str]]:   
 
     dias_comuns: Set[DiasDaSemana] = especialista01.intersection(especialista02)
 
@@ -34,14 +35,14 @@ def disp_dois_especialistas(
     if dias_disponiveis:
         return dias_disponiveis
 
-    return "Não há"
+    return ["NENHUM DIA DISPONÍVEL"]
 
 
 def disp_tres_especialistas(
         especialista01: Set[DiasDaSemana], 
         especialista02: Set[DiasDaSemana], 
         especialista03: Set[DiasDaSemana]
-    ) -> Union[List[DiasDaSemana], str]:
+    ) -> Union[List[DiasDaSemana], List[str]]:
 
     dias_comuns: Set[DiasDaSemana] = especialista01.intersection(especialista02, especialista03)
 
@@ -52,18 +53,23 @@ def disp_tres_especialistas(
     if dias_disponiveis:
         return dias_disponiveis
     
-    return "Não há"
-
+    return ["NENHUM DIA DISPONÍVEL"]
 
 
 disponibilidade = disp_dois_especialistas(especialistas["cardiologista"], especialistas["ortopedista"])
-print(f"Disponibilidade no mesmo dia para cardiologista e ortopedista: {disponibilidade}")
+print(f"\nDisponibilidade no mesmo dia para cardiologista e ortopedista: {disponibilidade}")
+
+
 
 disponibilidade = disp_dois_especialistas(especialistas["neurologista"], especialistas["ortopedista"])
-print(f"Disponibilidade no mesmo dia para neurologista e ortopedista: {disponibilidade}")
+print(f"\nDisponibilidade no mesmo dia para neurologista e ortopedista: {disponibilidade}")
+
+
 
 disponibilidade = disp_tres_especialistas(especialistas["cardiologista"], especialistas["ortopedista"], especialistas["psiquiatra"])
-print(f"Disponibilidade no mesmo dia para cardiologista, ortopedista e psiquiatra: {disponibilidade}")
+print(f"\nDisponibilidade no mesmo dia para cardiologista, ortopedista e psiquiatra: {disponibilidade}")
+
+
 
 disponibilidade = disp_tres_especialistas(especialistas["cardiologista"], especialistas["psiquiatra"], especialistas["dermatologista"])
-print(f"Disponibilidade no mesmo dia para cardiologista, psiquiatra e dermatologista: {disponibilidade}")
+print(f"\nDisponibilidade no mesmo dia para cardiologista, psiquiatra e dermatologista: {disponibilidade}")

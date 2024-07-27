@@ -1,5 +1,6 @@
 from typing import List, Optional, Tuple
 
+
 def maior_impar(lista: List[int]) -> Optional[int]:
     maior_impar: Optional[int] = None
 
@@ -29,11 +30,8 @@ def maior_e_menor_impar(lista: List[int]) -> Tuple[Optional[int], Optional[int]]
     return (maior, menor)
 
 
-lista = [-1, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 209]
-
+lista: List[int] = [-1, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 209]
 maior_impar_na_lista, menor_impar_na_lista = maior_e_menor_impar(lista)
-
-
 
 print("O maior impar é:", maior_impar_na_lista) 
 print("O menor impar é:", menor_impar_na_lista) 

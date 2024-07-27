@@ -1,5 +1,7 @@
-nomes: list[str] = ['Maria', 'Julieta', 'Fernando', 'Cristiano', 'Julieta', 'Maria', 'Fernando', 'Cláudio'] 
-qtd_letras: dict[str] = {}
+from typing import Dict, List
+
+nomes: List[str] = ["Maria", "Julieta", "Fernando", "Cristiano", "Julieta", "Maria", "Fernando", "Cláudio"] 
+qtd_letras: Dict[str, int] = {}
 
 for nome in nomes:
     qtd_letras[nome] = len(nome) 
