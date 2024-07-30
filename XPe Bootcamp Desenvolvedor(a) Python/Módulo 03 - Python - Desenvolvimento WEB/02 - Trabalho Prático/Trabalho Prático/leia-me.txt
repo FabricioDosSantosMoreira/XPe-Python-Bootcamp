@@ -1,0 +1,23 @@
+1. Ir até o diretório:
+    cd '.\Trabalho Prático\'
+
+2. Ativar o poetry shell:
+    poetry shell
+
+    OBS: se o virtual env estiver incorreto, use:
+        poetry env use <caminho-para-seu-venv>
+
+3. Instalar as dependências:
+    poetry install
+
+4. Executar a aplicação:
+    make run 
+
+    OBS: É necessário ter o MakeFile
+    Ou, utilize:
+        cd .\project\ 
+        python manage.py runserver
+
+5. Rotas disponíveis:
+
+    -> http://127.0.0.1:8000/

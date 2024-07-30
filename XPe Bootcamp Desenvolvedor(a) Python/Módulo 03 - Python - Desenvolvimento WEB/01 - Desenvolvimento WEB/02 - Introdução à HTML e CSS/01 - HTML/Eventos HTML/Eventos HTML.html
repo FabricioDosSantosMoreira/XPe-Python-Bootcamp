@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos HTML</title>
+    <style>
+        /* Adicionei alguns estilos básicos para melhor visualização */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2, h3, h4 {
+            color: #333;
+        }
+        input, button {
+            margin-top: 10px;
+            display: block;
+        }
+    </style>
+</head>
+<body onload="initializePage()">
+
+    <!-- Evento onChange -->
+    <!--
+    O evento onChange é acionado quando o valor de um elemento de entrada (input) é alterado.
+    Isso é útil para realizar ações imediatas em resposta a mudanças no valor do campo.
+    -->
+    <h1>Evento onChange</h1>
+    <input onchange="handleInputChange()" type="text" id="inputChange"><br>
+
+    <!-- Evento onClick -->
+    <!--
+    O evento onClick é acionado quando um usuário clica em um elemento, como um botão.
+    É frequentemente usado para enviar dados, alterar o conteúdo da página ou executar ações.
+    -->
+    <h2>Eventos onChange e onClick</h2>
+    <input type="text" id="inputClick">
+    <button onclick="handleButtonClick()" type="button">Mostrar Valor</button>
+
+    <!-- Evento onSubmit -->
+    <!--
+    O evento onSubmit é acionado quando um formulário é enviado. Pode ser usado para validar os dados
+    do formulário ou para realizar ações antes do envio. Em geral, a função associada deve retornar false
+    para evitar o envio padrão do formulário.
+    -->
+    <h4>Evento onSubmit</h4>
+    <form onsubmit="handleFormSubmit(); return false;">
+        <input type="submit" value="Enviar Formulário">
+    </form>
+
+    <!-- Eventos onLoad, onMouseOver e onMouseOut -->
+    <!--
+    O evento onLoad é acionado quando a página ou um elemento é totalmente carregado. Pode ser usado para
+    inicializar conteúdo ou configurações.
+    O evento onMouseOver é acionado quando o ponteiro do mouse passa sobre um elemento, útil para mostrar
+    informações adicionais ou alterar a aparência do elemento.
+    O evento onMouseOut é acionado quando o ponteiro do mouse sai de um elemento, geralmente usado para
+    restaurar a aparência original ou esconder informações adicionais.
+    -->
+    <h3>Eventos onLoad e onMouseOver</h3>
+    <img onmouseover="handleMouseOver()" onmouseout="handleMouseOut()" src="" alt="imagem" id="image" style="width: 300px; height: auto;">
+
+    <script>
+        // Função chamada quando o evento onChange é disparado
+        function handleInputChange() {
+            alert("O valor do campo de texto foi alterado.");
+        }
+
+        // Função chamada quando o botão é clicado
+        function handleButtonClick() {
+            alert("Valor do campo de texto: " + document.getElementById("inputClick").value);
+        }
+
+        // Função chamada quando a página é carregada
+        function initializePage() {
+            document.getElementById("image").src = "./data/imagem_1.jpg";
+        }
+
+        // Função chamada quando o mouse passa sobre a imagem
+        function handleMouseOver() {
+            document.getElementById("image").src = "./data/imagem_2.jpg";
+        }
+
+        // Função chamada quando o mouse sai da imagem
+        function handleMouseOut() {
+            initializePage(); // Restaura a imagem inicial
+        }
+
+        // Função chamada quando o formulário é enviado
+        function handleFormSubmit() {
+            alert("Formulário enviado!");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "Trabalho Prático"
+version = "0.0.1"
+description = "Projeto em Django para resolver o trabalho prático do módulo de Desenvolvimento WEB"
+authors = ["Fabrício Dos Santos Moreira"]
+readme = ""
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "5.0.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

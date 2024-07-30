@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .form-box {
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+        }
+        .form-group label {
+            flex: 1;
+            margin-right: 10px;
+        }
+        .form-group .form-control {
+            flex: 2;
+        }
+        .form-box .btn {
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container form-container">
+        <div class="form-box">
+            <form action="{{ url_for('user_bp.create') }}" method="post">
+                {{ form.hidden_tag() }}
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    {{ form.nome(class="form-control", placeholder="Seu nome aqui") }}
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    {{ form.telefone(class="form-control", placeholder="Seu telefone aqui") }}
+                </div>
+                <div class="form-group">
+                    <label for="endereco">Endereço</label>
+                    {{ form.endereco(class="form-control", placeholder="Seu endereço aqui") }}
+                </div>
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    {{ form.cpf(class="form-control", placeholder="Seu CPF aqui") }}
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <input type="hidden" name="_method" value="POST">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

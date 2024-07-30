@@ -1,0 +1,56 @@
+1. Ir até o diretório:
+    cd .\Django-CRUD\
+
+2. Ativar o poetry shell:
+    poetry shell
+
+    OBS: se o virtual env estiver incorreto, use:
+        poetry env use <caminho-para-seu-venv>
+
+3. Instalar as dependências:
+    poetry install
+
+4. Se for a primeira vez, executar as migrations:
+    make run-migrate
+
+    OBS: É necessário ter o MakeFile
+    Ou, utilize:
+        cd .\project\ 
+        python manage.py makemigrations application
+        python manage.py migrate
+
+5. Criar o usuário admin:
+    make create-superuser
+
+    OBS: É necessário ter o MakeFile
+    Ou, utilize:
+        cd .\project\ 
+        python manage.py createsuperuser
+
+6. Executar o Coverage:
+    make run run-coverage
+
+    OBS: É necessário ter o MakeFile
+    Ou, utilize: 
+	    cd .\project\ 
+        coverage run manage.py test 
+        coverage report 
+        coverage html
+
+7. Executar a aplicação:
+    make run 
+
+    OBS: É necessário ter o MakeFile
+    Ou, utilize:
+        cd .\project\ 
+        python manage.py runserver
+
+8. Rotas disponíveis:
+
+    -> http://127.0.0.1:8000/
+
+    -> http://127.0.0.1:8000/criar/
+    
+    -> http://127.0.0.1:8000/modificar/id
+
+    -> http://127.0.0.1:8000/deletar/id

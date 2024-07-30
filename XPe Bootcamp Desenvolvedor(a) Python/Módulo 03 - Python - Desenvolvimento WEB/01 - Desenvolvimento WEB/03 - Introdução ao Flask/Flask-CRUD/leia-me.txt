@@ -1,0 +1,50 @@
+1. Ir até o diretório:
+    cd .\Flask-CRUD\
+
+2. Ativar o poetry shell:
+    poetry shell
+
+    OBS: se o virtual env estiver incorreto, use:
+        poetry env use <caminho-para-seu-venv>
+
+3. Instalar as dependências:
+    poetry install
+
+4. Se for a primeira vez, executar as migrations:
+    make run-migrate
+
+    OBS: É necessário ter o MakeFile
+    Ou, utilize:
+        cd .\project\
+        $env:FLASK_APP="app:get_app"
+        flask db init
+        flask db migrate
+        flask db upgrade
+
+5. Executar a aplicação:
+    make run
+
+    OBS: É necessário ter o MakeFile
+    Ou, utilize:
+        cd .\project\
+        $env:FLASK_APP="app:get_app"
+        flask run
+
+6. É possível testar as rotas via Postman:
+
+    -> Criar um usuário:
+        POST http://127.0.0.1:5000/users/create
+        {"name": "teste", "age": "20", "address": "teste"}
+
+    -> Obter todos os usuários
+        GET http://127.0.0.1:5000/users
+
+    -> Obter um usuário por id:
+        GET http://127.0.0.1:5000/users/1
+
+    -> Atualizar um usuário por id:
+        PUT http://127.0.0.1:5000/users/update/1
+        {"name": "teste update", "age": "90", "address": "teste update"}
+
+    -> Deletar um usuário por id:
+        DELETE http://127.0.0.1:5000/users/delete/1

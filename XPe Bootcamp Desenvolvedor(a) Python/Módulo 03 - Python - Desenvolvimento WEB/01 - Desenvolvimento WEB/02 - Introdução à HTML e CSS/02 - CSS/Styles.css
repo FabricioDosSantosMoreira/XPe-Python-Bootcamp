@@ -1,0 +1,45 @@
+/* Estilo para o título principal */
+.titulo-principal {
+    background-color: rgb(30, 255, 0); 
+    font-size: 100px; 
+    font-family: cursive;
+}
+
+/* Estilo para o subtítulo */
+.subtitulo {
+    background-color: rgb(255, 255, 255); 
+    font-size: 100px; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilo para um elemento com destaque inicial */
+.destaque-inicial {
+    background-color: aqua;
+}
+
+/* Animação de escala */
+@keyframes animacao-escala {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Estilo para parágrafos animados */
+.paragrafo-animado {
+    background-color: blueviolet;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: animacao-escala 5s ease-in-out infinite;
+}
+
+/* Estilo para parágrafos normais */
+.paragrafo-normal {
+    background-color: rgb(111, 0, 255); 
+    font-size: 40px; 
+    font-family: cursive;
+}

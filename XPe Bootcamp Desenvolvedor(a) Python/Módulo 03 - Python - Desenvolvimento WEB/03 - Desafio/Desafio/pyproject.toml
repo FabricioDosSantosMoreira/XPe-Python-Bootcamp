@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "Desafio"
+version = "0.0.1"
+description = "Projeto em Flask para resolver o desafio do módulo de Desenvolvimento WEB"
+authors = ["Fabrício Dos Santos Moreira"]
+readme = ""
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+alembic = "1.13.2"
+flask = "3.0.3"
+flask-migrate = "4.0.7"
+flask-sqlalchemy = "3.1.1"
+flask-wtf = "1.2.1"
+wtforms = "3.1.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

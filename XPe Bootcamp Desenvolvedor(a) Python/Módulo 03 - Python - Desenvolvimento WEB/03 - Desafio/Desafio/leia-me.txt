@@ -1,0 +1,33 @@
+1. Ir até o diretório:
+    cd .\Desafio\
+
+2. Ativar o poetry shell:
+    poetry shell
+
+    OBS: se o virtual env estiver incorreto, use:
+        poetry env use <caminho-para-seu-venv>
+
+3. Instalar as dependências:
+    poetry install
+
+4. Se for a primeira vez, executar as migrations:
+    make run-migrate
+
+    OBS: É necessário ter o MakeFile
+    Ou, utilize:
+        $env:FLASK_APP="project.app:get_app"
+        flask db init
+        flask db migrate
+        flask db upgrade
+
+5. Executar a aplicação:
+    make run
+
+    OBS: É necessário ter o MakeFile
+    Ou, utilize:
+        $env:FLASK_APP="project.app:get_app"
+        flask run
+
+6. Rotas disponíveis:
+
+    -> http://127.0.0.1:5000/
